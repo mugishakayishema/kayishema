@@ -45,6 +45,11 @@ body {
     color: #FFFFFF;
     font-weight: 700;
 }
+.logo img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
 .logo-link { text-decoration: none; color: inherit; display: inline-block; }
 
 .nav.desktop-only { display: none; }
