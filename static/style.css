@@ -403,6 +403,7 @@ button:hover, .two:hover, .second:hover {
     .projects, .projects-grid { flex-direction: row; flex-wrap: wrap; }
     .project-1, .project-2, .project-card { width: 330px; }
     .project-small { width: 250px; }
+    .impact-project { width: min(100%, 560px); }
     
     .form-row { flex-direction: row; }
     .form-input { width: 100%; }
@@ -415,7 +416,6 @@ button:hover, .two:hover, .second:hover {
     .skills-left-shapes { display: block; width: 35%; }
     .shape-box { width: 60px; height: 60px; border: 1px solid #ABB2BF; margin-left: 20px; }
     .shape-dots { margin-top: 20px; margin-left: 60px; color: #ABB2BF; letter-spacing: 5px; }
-    .skill-box { max-width: 178px; }
     
     /* 8. FOOTER */
     .footer { flex-direction: row; justify-content: space-between; text-align: left; }
