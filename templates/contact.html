@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Principie</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="header-nav">
+        <a href="{{ url_for('home') }}" class="logo-link">
+            <div class="logo">
+                <img src="{{ url_for('static', filename='images/Union.png') }}" alt="Logo" class="logo-img">
+                <h3>Kayishema</h3>
+            </div>
+        </a>
+        <div class="nav desktop-only">
+            <nav>
+                <ul>
+                    <li><a href="{{ url_for('home') }}"><span class="hash">#</span><span data-i18n="nav_home">home</span></a></li>
+                    <li><a href="{{ url_for('projects') }}"><span class="hash">#</span><span data-i18n="nav_works">works</span></a></li>
+                    <li><a href="{{ url_for('about') }}"><span class="hash">#</span><span data-i18n="nav_about">about-me</span></a></li>
+                    <li><a href="{{ url_for('contact') }}" class="active"><span class="hash">#</span><span data-i18n="nav_contacts">contacts</span></a></li>
+                    <li style="cursor: pointer;" onclick="toggleLanguage()">
+                        <span id="lang-display">EN</span> <span class="hash">v</span>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="burger-icon" onclick="toggleMenu()">
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+    </div>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-header">
+            <div class="logo">
+                <img src="{{ url_for('static', filename='images/Union.png') }}" alt="Logo">
+                <h3>Kayishema</h3>
+            </div>
+            <div class="close-icon" onclick="toggleMenu()">X</div>
+        </div>
+        <ul class="mobile-links">
+            <li><a href="{{ url_for('home') }}"><span class="hash">#</span><span data-i18n="nav_home">home</span></a></li>
+            <li><a href="{{ url_for('projects') }}"><span class="hash">#</span><span data-i18n="nav_works">works</span></a></li>
+            <li><a href="{{ url_for('about') }}"><span class="hash">#</span><span data-i18n="nav_about">about-me</span></a></li>
+            <li><a href="{{ url_for('contact') }}"><span class="hash">#</span><span data-i18n="nav_contacts">contacts</span></a></li>
+            <li onclick="toggleLanguage()"><span id="mobile-lang-display">EN</span> <span class="hash">v</span></li>
+        </ul>
+    </div>
+
+    <div class="main-container hidden-element" style="margin-top: 50px;">
+        <div class="page-title-box">
+            <h1 class="page-title"><span class="hash">/</span><span data-i18n="page_contact_title">contacts</span></h1>
+            <p class="page-desc" data-i18n="page_contact_desc">Who am I?</p>
+        </div>
+    </div>
+
+    <div class="main-container hidden-element delay-200">
+        <div class="contact-full-layout">
+            <div class="contact-left">
+                <p class="contact-desc" data-i18n="contact_text">
+                    I’m interested and open for freelance opportunities. However,<br>
+                    for  any other request or question, don’t<br>
+                    hesitate to contact me
+                </p>
+                
+                <div class="support-box">
+                    <p class="msg-title" data-i18n="support_me">Support me here</p>
+                    <div class="payment-row">
+                        <a href="https://buymeacoffee.com/mugishakayishema" target="_blank" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 10px;">
+                            <img src="{{ url_for('static', filename='images/download.png') }}" style="width:20px;"> <span>BuyMeaCoffee</span>
+                        </a>
+                    </div>
+                    <div class="payment-row">
+                        <span>📱</span> <span>*182*8*1*627980#</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-right">
+                <div class="message-me-box">
+                    <p class="msg-title" data-i18n="message_me">Message me here</p>
+                    
+                    <div class="contact-item">
+                        <a href="https://wa.me/250784015966" target="_blank" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 10px;">
+                           <img src="{{ url_for('static', filename='images/whatsapp.png') }}" style="width:20px;"> <span>+250 784015966</span>
+                        </a>
+                    </div>
+
+                    <div class="contact-item">
+                        <a href="mailto:kayishemamugisha@gmail.com" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 10px;">
+                            <img src="{{ url_for('static', filename='images/email.png') }}" style="width:20px;"> <span>kayishemamugisha@gmail.com</span>
+                        </a>
+                    </div>
+                </div>
+
+                 <form class="contact-form">
+                     <div class="form-row">
+                         <input type="text" placeholder="Name" class="form-input" required>
+                         <input type="email" placeholder="Email" class="form-input" required>
+                     </div>
+                     <input type="text" placeholder="Title" class="form-input">
+                     <textarea placeholder="Message" class="form-input form-area" required></textarea>
+                     <button type="submit" class="two" data-i18n="btn_send">Send</button>
+                 </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-line"></div>
+    <div class="footer">
+        <div class="footer-left">
+            <div class="footer-logo">
+                <img src="{{ url_for('static', filename='images/Union.png') }}" width="16px"> <span>Kayishema</span> <span class="email-text">kayishemamugisha@gmail.com</span>
+            </div>
+            <p data-i18n="footer_role">Backend Engineer and Data scientist</p>
+        </div>
+        <div class="footer-right">
+            <h3>Media</h3>
+            <div class="socials">
+                <a href="https://github.com/mugishakayishema"><img src="{{ url_for('static', filename='images/github.png') }}" alt="gh"></a>
+                <a href="https://instagram.com/mugishakayishema"><img src="{{ url_for('static', filename='images/instagram.png') }}" alt="fg"></a>
+                <a href="https://linkedin.com/in/kayishema-mugisha-4b95043a2"><img src="{{ url_for('static', filename='images/linkedin.png') }}" alt="dc"></a>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>© Copyright 2026. Made by Kayishema.</p>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
