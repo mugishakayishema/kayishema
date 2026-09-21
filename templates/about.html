@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - Kayishema</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="header-nav">
+        <a href="{{ url_for('home') }}" class="logo-link">
+            <div class="logo">
+                <img src="{{ url_for('static', filename='images/Union.png') }}" alt="Logo" class="logo-img">
+                <h3>Mugisha</h3>
+            </div>
+        </a>
+        <div class="nav desktop-only">
+            <nav>
+                <ul>
+                    <li><a href="{{ url_for('home') }}"><span class="hash">#</span>home</a></li>
+                    <li><a href="{{ url_for('projects') }}"><span class="hash">#</span>works</a></li>
+                    <li><a href="{{ url_for('about') }}" class="active"><span class="hash">#</span>about-me</a></li>
+                    <li><a href="{{ url_for('contact') }}"><span class="hash">#</span>contacts</a></li>
+                    <li><a href="{{ url_for('home') }}">EN <span class="hash">v</span></a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="burger-icon" onclick="toggleMenu()">
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+    </div>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-header">
+            <div class="logo">
+                <img src="{{ url_for('static', filename='images/Union.png') }}" alt="Logo">
+                <h3>Principie</h3>
+            </div>
+            <div class="close-icon" onclick="toggleMenu()">X</div>
+        </div>
+        <ul class="mobile-links">
+            <li><a href="{{ url_for('home') }}"><span class="hash">#</span>home</a></li>
+            <li><a href="{{ url_for('projects') }}"><span class="hash">#</span>works</a></li>
+            <li><a href="{{ url_for('about') }}"><span class="hash">#</span>about-me</a></li>
+            <li><a href="{{ url_for('contact') }}"><span class="hash">#</span>contacts</a></li>
+        </ul>
+    </div>
+
+    <div class="main-container hidden-element" style="margin-top: 50px;">
+        <div class="page-title-box">
+            <h1 class="page-title"><span class="hash">/</span>about-me</h1>
+            <p class="page-desc">Who am I?</p>
+        </div>
+    </div>
+
+    <div class="main-container about-page-layout hidden-element delay-200">
+        <div class="about-text">
+            <p>Hello, I'm Principie!</p>
+            <br>
+            <p>I'm a front-end developer based in Kigali, Rwanda. I can develop responsive websites from scratch and raise them into modern user-friendly web experiences.</p>
+            <br>
+            <p>I'm currently pursuing a BSc (Hons) in Software Engineering with a strong academic record (CGPA: 4.50/5).</p>
+            <br>
+            <a href="CPrincipieCV.pdf" download><button class="two">Download CV <~></button></a>
+        </div>
+        <div class="about-image">
+             <img src="{{ url_for('static', filename='images/Group_46.png') }}" alt="Principie">
+             <div class="dots-decoration">.....<br>.....<br>.....<br>.....<br>.....</div>
+        </div>
+    </div>
+
+    <div class="main-container hidden-element">
+        <div class="section-title">
+            <h2><span class="hash">#</span>experience</h2>
+            <div class="linee-short"></div>
+        </div>
+        <div class="experience-list">
+             <div class="exp-item hover-card">
+                <span class="exp-date">Jan 2025 - Present</span>
+                <h3>Data Manager</h3>
+                <p class="exp-org">Cooperative KAJU</p>
+                <p>Designed Excel-based data systems and dashboards to improve data quality.</p>
+            </div>
+            <div class="exp-item hover-card">
+                <span class="exp-date">Apr 2024 - Present</span>
+                <h3>IT & Web Support Officer</h3>
+                <p class="exp-org">Raise Them Foundation</p>
+                <p>Provided technical support and managed user accounts and digital tools.</p>
+            </div>
+            <div class="exp-item hover-card">
+                <span class="exp-date">Dec 2023 - July 2024</span>
+                <h3>Teaching Assistant</h3>
+                <p class="exp-org">Inspire, Empower and Educate Rwanda</p>
+                <p>Managed academic data and supported teachers with digital tools.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-container hidden-element">
+        <div class="section-title">
+            <h2><span class="hash">#</span>education</h2>
+            <div class="linee-short"></div>
+        </div>
+        <div class="experience-list">
+             <div class="exp-item hover-card">
+                <span class="exp-date">September 2024 - June 2028</span>
+                <h3>BSc in Business Information And Technology.</h3>
+                <p class="exp-org">University Of Rwanda</p>
+                <p>Relevant Coursework: Database Structure, Algorithms, OOP, Data related courses, Networking and Business studies.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-container hidden-element">
+        <div class="section-title">
+            <h2><span class="hash">#</span>skills</h2>
+        </div>
+        <div class="skills-container">
+            <div class="skills-right" style="width: 100%; justify-content: center; flex-wrap: wrap;">
+                <div class="skill-col">
+                    <div class="skill-box hover-card"><div class="skill-header">Languages</div><div class="skill-list">Python JavaScript C++</div></div>
+                </div>
+                <div class="skill-col">
+                    <div class="skill-box hover-card"><div class="skill-header">Databases</div><div class="skill-list">PostgreSQL MySQL<br>SQLite</div></div>
+                </div>
+                <div class="skill-col">
+                    <div class="skill-box hover-card"><div class="skill-header">Tools</div><div class="skill-list">Figma Git<br>VS Code Linux</div></div>
+                </div>
+                 <div class="skill-col">
+                    <div class="skill-box hover-card"><div class="skill-header">Frameworks</div><div class="skill-list">Flask FastAPI<br>React.js</div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-container hidden-element">
+        <div class="section-title">
+            <h2><span class="hash">#</span>my-fun-facts</h2>
+        </div>
+        <div class="fun-facts-container">
+            <div class="fact-tag">I like winter more than summer</div>
+            <div class="fact-tag">I support Chelsea and Barcelona</div>
+            <div class="fact-tag">I like <span class="white">pizza</span> and <span class="white">pasta</span></div>
+            <div class="fact-tag">I was in Kenya and <span class="white">Mauritius</span></div>
+            <div class="fact-tag">My favorite serie is Squid game</div>
+            <div class="fact-tag">I am still in school</div>
+        </div>
+    </div>
+
+    <div class="footer-line"></div>
+    <div class="footer">
+        <div class="footer-left">
+            <div class="footer-logo">
+                <img src="{{ url_for('static', filename='images/Union.png') }}" width="16px"> <span>Kayishema</span> <span class="email-text">kayishemamugisha@gmail.com</span>
+            </div>
+            <p>Back-end Developer and Aspiring Data Scientist</p>
+        </div>
+        <div class="footer-right">
+            <h3>Media</h3>
+            <div class="socials">
+                <a href="https://github.com/mugishakayishema"><img src="{{ url_for('static', filename='images/github.png') }}" alt="gh"></a>
+                <a href="https://instagram.com/mugishakayishema"><img src="{{ url_for('static', filename='images/instagram.png') }}" alt="fg"></a>
+                <a href="https://linkedin.com/in/kayishema-mugisha-4b95043a2"><img src="{{ url_for('static', filename='images/linkedin.png') }}" alt="dc"></a>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>© Copyright 2026. Made by Kayishema😎</p>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
