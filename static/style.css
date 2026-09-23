@@ -272,7 +272,8 @@ button:hover, .two:hover, .second:hover {
 .project-card img, .project-1 img, .project-2 img {
     width: 100%;
     height: 201px;
-    object-fit: cover;
+    object-fit: contain;
+    background-color: #282C33;
     border-bottom: 1px solid #ABB2BF;
 }
 .line-1, .line-2, .card-tech {

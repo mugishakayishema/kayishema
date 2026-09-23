@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Kayishema</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="header-nav">
+        <a href="{{ url_for('home') }}" class="logo-link">
+            <div class="logo">
+                <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo" class="logo-img">
+                <h3>Mugisha</h3>
+            </div>
+        </a>
+        <div class="nav desktop-only">
+            <nav>
+                <ul>
+                    <li><a href="{{ url_for('home') }}"><span class="hash">#</span>home</a></li>
+                    <li><a href="{{ url_for('projects') }}" class="active"><span class="hash">#</span>works</a></li>
+                    <li><a href="{{ url_for('about') }}"><span class="hash">#</span>about-me</a></li>
+                    <li><a href="{{ url_for('contact') }}"><span class="hash">#</span>contacts</a></li>
+                    <li><a href="{{ url_for('home') }}">EN <span class="hash">v</span></a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="burger-icon" onclick="toggleMenu()">
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+    </div>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-header">
+            <div class="logo">
+                <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo">
+                <h3>Mugisha</h3>
+            </div>
+            <div class="close-icon" onclick="toggleMenu()">X</div>
+        </div>
+        <ul class="mobile-links">
+            <li><a href="{{ url_for('home') }}"><span class="hash">#</span>home</a></li>
+            <li><a href="{{ url_for('projects') }}"><span class="hash">#</span>works</a></li>
+            <li><a href="{{ url_for('about') }}"><span class="hash">#</span>about-me</a></li>
+            <li><a href="{{ url_for('contact') }}"><span class="hash">#</span>contacts</a></li>
+        </ul>
+    </div>
+
+    <div class="main-container hidden-element" style="margin-top: 50px;">
+        <div class="page-title-box">
+            <h1 class="page-title"><span class="hash">/</span>projects</h1>
+            <p class="page-desc">List of my projects</p>
+        </div>
+    </div>
+
+    <div class="main-container hidden-element delay-200">
+        <div class="section-title">
+            <h2><span class="hash">#</span>complete-apps</h2>
+        </div>
+
+        <div class="projects-grid">
+            <div class="project-card hover-card">
+                <img src="{{ url_for('static', filename='images/mpact.png') }}" alt="Mpact">
+                <div class="card-tech">HTML CSS JavaScript python Flask</div>
+                <div class="card-body">
+                    <h3>Mpact</h3>
+                    <p>Screening platform that enable Human resource teams screen more candidates as they can at once.</p>
+                    <div class="card-buttons">
+                        <a href="https://mpact.principie.tech/" target="_blank"><button class="two">Live <~></button></a>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card hover-card">
+                <img src="{{ url_for('static', filename='images/portfolio.png') }}" alt="Portfolio">
+                <div class="card-tech">HTML CSS JavaScript</div>
+                <div class="card-body">
+                    <h3>Portfolio</h3>
+                    <p>You’re using it rn</p>
+                    <div class="card-buttons">
+                        <a href="https://github.com/" target="_blank"><button class="second">Github <~></button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-container hidden-element">
+        <div class="section-title">
+            <h2><span class="hash">#</span>small-projects</h2>
+        </div>
+
+        <div class="projects-grid">
+            <div class="project-card small hover-card">
+                <div class="card-tech">Python Flask</div>
+                <div class="card-body">
+                    <h3>Compensation Management System</h3>
+                    <p>Backend Api and system managing Employees and the compensations.</p>
+                    <div class="card-buttons">
+                        <a href="https://github.com/mugishakayishema" target="_blank"><button class="second">Github <~></button></a>
+                    </div>
+                </div>
+            </div>
+            
+         </div>
+    </div>
+
+    <div class="footer-line"></div>
+    <div class="footer">
+        <div class="footer-left">
+            <div class="footer-logo">
+                <img src="{{ url_for('static', filename='images/logo.png') }}" width="16px"> <span>Kayishema</span> <span class="email-text">kayishemamugisha@gmail.com</span>
+            </div>
+            <p>Data scientist and Back-end developer</p>
+        </div>
+        <div class="footer-right">
+            <h3>Media</h3>
+            <div class="socials">
+                <a href="https://github.com/mugishakayishema"><img src="{{ url_for('static', filename='images/github.png') }}" alt="gh"></a>
+                <a href="https://instagram.com/mugishakayishema"><img src="{{ url_for('static', filename='images/instagram.png') }}" alt="fg"></a>
+                <a href="https://linkedin.com/in/kayishema-mugisha-4b95043a2"><img src="{{ url_for('static', filename='images/linkedin.png') }}" alt="dc"></a>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>© Copyright 2026. Made by Mugisha.</p>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
