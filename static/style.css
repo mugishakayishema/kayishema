@@ -276,6 +276,12 @@ button:hover, .two:hover, .second:hover {
     background-color: #282C33;
     border-bottom: 1px solid #ABB2BF;
 }
+.impact-project > img {
+    height: auto;
+    aspect-ratio: 690 / 386;
+    object-fit: cover;
+    display: block;
+}
 .line-1, .line-2, .card-tech {
     border-bottom: 1px solid #ABB2BF;
     padding: 8px;
