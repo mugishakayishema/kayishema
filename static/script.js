@@ -5,7 +5,7 @@ function toggleMenu() {
 
 const typeTextSpan = document.querySelector(".type-text");
 if (typeTextSpan) {
-    const words = ["Aspiring Data Scientist", "Backend Engineer", "Business and Tech student"];
+    const words = ["Aspiring Data Scientist", "Backend Engineer", "Business enthusiast and Tech student"];
     let wordIndex = 0;
     let charIndex = 0;
     let isDeleting = false;
